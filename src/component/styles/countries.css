@@ -1,0 +1,122 @@
+body {
+  background-color: bisque;
+}
+
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2,
+h3,
+p {
+  text-align: right;
+  color: rgb(22, 6, 71);
+}
+
+.myApp {
+  width: 100%;
+  margin: auto;
+  background-color: bisque;
+}
+
+.bg_header {
+  width: 100%;
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+.countries_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 80%;
+  margin-top: 14rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flag-image {
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 200px;
+}
+
+.header {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 40% 40%;
+  gap: 1.5rem;
+  top: 0;
+  background-color: rgb(246, 232, 215);
+  position: fixed;
+}
+
+@media screen and (max-width: 470px) {
+  .header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1.5rem;
+    top: 0;
+    background-color: rgb(246, 232, 215);
+    position: fixed;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .image_container {
+    overflow: auto;
+  }
+
+  .countries_container {
+    display: grid;
+    margin-top: 0;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .Stats_heading {
+    background-color: bisque;
+    width: 100%;
+    margin-top: 130px;
+    padding: 0 20px;
+  }
+
+  .flag-image {
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 100px;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 20px;
+    border: 1px solid rgba(164, 137, 104, 0.2);
+    height: 230px;
+  }
+
+  .countries_container p,
+  .countries_container h2 {
+    text-align: right;
+  }
+}

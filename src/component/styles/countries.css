@@ -67,7 +67,17 @@ li {
   position: fixed;
 }
 
+.home_heading {
+  display: none;
+}
+
 @media screen and (max-width: 470px) {
+  .home_heading {
+    display: flex;
+    text-align: center;
+    color: rgb(22, 6, 71);
+  }
+
   .header {
     display: grid;
     grid-template-columns: 50% 50%;

@@ -1,11 +1,11 @@
-import React, {useEffect} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import {Link, useParams} from 'react-router-dom';
-import {getCountries} from '../redux/slice/countriesSlice'; // Import your action
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
+import { getCountries } from '../redux/slice/countriesSlice'; // Import your action
 import './styles/Details.css';
 
 const Details = () => {
-  const {name} = useParams(); // Get the 'name' parameter from the URL
+  const { name } = useParams(); // Get the 'name' parameter from the URL
   console.log(name);
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.data);
@@ -15,7 +15,7 @@ const Details = () => {
   console.log('The selected country', country);
 
   useEffect(() => {
-    if(!country) {
+    if (!country) {
       // Dispatch an action to load details if not already available
       dispatch(getCountries(name)); // Assuming your action expects the country name
     }
@@ -38,7 +38,8 @@ const Details = () => {
             <div className="name-container">
               <h2 className="country-name">{country.name.common}</h2>
               <p className="country-area">
-                Area: {country.area}
+                Area:
+                {country.area}
               </p>
             </div>
           </div>
@@ -54,9 +55,9 @@ const Details = () => {
               <p>Population:</p>
               <p>{country.population}</p>
             </div>
-             <div>
-               <p>Region:</p>
-               <p>{country.region}</p>
+            <div>
+              <p>Region:</p>
+              <p>{country.region}</p>
             </div>
             <div>
               <p>Subregion:</p>
@@ -71,8 +72,8 @@ const Details = () => {
               <p>{country.capital}</p>
             </div>
             <div>
-              <p>Capital:</p>
-              <p>{country.capital}</p>
+              <p>Flag:</p>
+              <p>{country.flag}</p>
             </div>
             <div>
               <p>Location on googleMaps:</p>

@@ -4,8 +4,54 @@
   margin: 0;
 }
 
+.details_header {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.details_img_container {
+  background-color: rgb(246, 232, 215);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+}
+
 p {
   font-weight: 600;
+}
+
+.country_details_head p {
+  width: 70%;
+  margin: auto;
+  text-align: left;
+  padding: 20px 8px;
+}
+
+.details {
+  width: 70%;
+  margin: auto;
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 8px;
+}
+
+.details div:nth-child(odd) {
+  background-color: rgb(250, 203, 145);
+}
+
+.details_header > .back-btn,
+.details_header > p {
+  font-size: 35px;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 470px) {

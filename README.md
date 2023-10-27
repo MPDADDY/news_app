@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Country Canvas <a name="about-project"></a>
+# 📖 Country Data <a name="about-project"></a>
 
-**Country Canvas** is a simple app created by React.js that display a filter able country list with title, flag and area. By clicking on the contry it displays some details about that country on a specfic page.
+**Country Data** is a simple app created by React.js that display a filter able country list with title, flag and area. By clicking on the contry it displays some details about that country on a specfic page.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -58,7 +58,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Country Canvas Live Link](https://globe-app.onrender.com/)
+- [Contry Data Live Link](https://globe-app.onrender.com/)
 
 ## Presentation Video <a name="video-presentation"></a>
 
@@ -111,11 +111,11 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Al Amin Khan Shakil**
+👤 **Anold Mwawasi**
 
-- GitHub: [Al Amin Khan Shakil](https://github.com/Al-Amin-Khan-Shakil)
-- Twitter: [Al Amin Khan Shakil](https://twitter.com/AlAminKhan85004)
-- LinkedIn: [Al Amin Khan Shakil](https://www.linkedin.com/in/al-amin-khan-shakil/)
+- GitHub: [@MPDADDY](https://github.com/MPDADDY)
+- Twitter: [@anoldmwawasi](https://twitter.com/anold_mwawasi)
+- LinkedIn: [anoldmwawasi](https://www.linkedin.com/in/anold-mwawasi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +133,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Al-Amin-Khan-Shakil/country-canvas/issues).
+Feel free to check the [issues page](https://github.com/Al-MPDADDY/newsapp/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,7 +141,7 @@ Feel free to check the [issues page](https://github.com/Al-Amin-Khan-Shakil/coun
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project give it a star to encrouge.
+If you like this project give it a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,5 +174,3 @@ I would like to thank [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) 
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Al-Amin-Khan-Shakil/country-canvas">Country Canvas</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Al-Amin-Khan-Shakil">Al Amin Khan Shakil</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>

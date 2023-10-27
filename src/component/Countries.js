@@ -1,84 +1,27 @@
-// import { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import {getCountries} from '../redux/slice/countriesSlice';
-// import {Link} from 'react-router-dom';
-// import bg from './bg.png'
-// import '../component/styles/countries.css'
-// const Countries = () => {
-//   const dispatch = useDispatch();
-//   const countries = useSelector((state) => state.countries.data)
-//   console.log(countries)
-  
-
-//   useEffect(() => {
-//     if (!countries || !countries.length) {
-//       dispatch(getCountries());
-//     }
-//   }, [dispatch, countries]);
-
-//   countries.map(country => {
-//     console.log(country)
-//   })
-
-//   return (
-//     <div>
-//       <div className="header">
-//         <div className="image_container">
-//           <img src={bg} />
-//         </div>
-//         <div>
-//           <h3>Countries Data</h3>
-//           <p>Over 50 countries</p>
-//         </div>
-//       </div>
-//       <div className="Stats_heading">
-//         <h4>stats By country</h4>
-//       </div>
-//       <ul className="countries_container">
-//         {
-//           countries.map((country) => (
-//             <li>
-//               <Link to={`/details/${country.capital}`} className="country-link">
-//                   <div className="img-container">
-//                     <img src={country.flags.png} alt={`flag of ${country.name[2]}`} className="flag-image" />
-//                   </div>
-//                   <div className="name-container">
-//                     <h2 className="country-name">{country.name.common}</h2>
-//                     <p className="country-area">
-//                       Area:
-//                       {' '}
-//                       {country.area}
-//                     </p>
-//                   </div>
-//                 </Link>
-//               </li>
-//           ))
-//         }
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default Countries;
-import {useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {getCountries} from '../redux/slice/countriesSlice';
-import {Link} from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
+import { getCountries } from '../redux/slice/countriesSlice';
 import bg from './bg.png';
-import '../component/styles/countries.css';
+import './styles/countries.css';
 
 const Countries = () => {
   const dispatch = useDispatch();
   const countries = useSelector((state) => state.countries.data);
+  const uniqueKey = uuid();
 
   useEffect(() => {
-    if(!countries || !countries.length) {
+    if (!countries || !countries.length) {
       dispatch(getCountries());
     }
   }, [dispatch, countries]);
 
   return (
     <div className="myApp">
+      <div>
+        <h1 className="home_heading">HOME</h1>
+      </div>
       <div className="header">
         <div className="image_container">
           <img className="bg_header" src={bg} alt="Background" />
@@ -92,8 +35,8 @@ const Countries = () => {
         <h4>Stats By Country</h4>
       </div>
       <ul className="countries_container">
-        {countries.map((country, index) => (
-          <li key={index}>
+        {countries.map((country) => (
+          <li key={uniqueKey}>
             <Link to={`/details/${country.name.common}`} className="country-link">
               <div className="img-container">
                 <img src={country.flags.png} alt={`flag of ${country.name[2]}`} className="flag-image" />
@@ -101,7 +44,8 @@ const Countries = () => {
               <div className="name-container">
                 <h3 className="country-name">{country.name.common}</h3>
                 <p className="country-area">
-                  Area: {country.area}
+                  Area:
+                  {country.area}
                 </p>
               </div>
             </Link>

@@ -7,8 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Countries />} />
-        {/* <Route path="/Details" element={<Details />} /> */}
-        <Route path="/details/:name" element={<Details />} /> {/* Dynamic route */}
+        <Route path="/details/:name" element={<Details />} />
       </Routes>
     </Router>
   );

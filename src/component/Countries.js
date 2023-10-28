@@ -1,27 +1,36 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { v4 as uuid } from 'uuid';
 import { getCountries } from '../redux/slice/countriesSlice';
 import bg from './bg.png';
 import './styles/countries.css';
 
 const Countries = () => {
   const dispatch = useDispatch();
-  const countries = useSelector((state) => state.countries.data);
-  const uniqueKey = uuid();
+  const countriesData = useSelector((state) => state.countries.data);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredCountries, setFilteredCountries] = useState([]);
 
   useEffect(() => {
-    if (!countries || !countries.length) {
+    if (!countriesData || !countriesData.length) {
       dispatch(getCountries());
     }
-  }, [dispatch, countries]);
+  }, [dispatch, countriesData]);
+
+  // Update filteredCountries whenever the countriesData or searchTerm changes
+  useEffect(() => {
+    const filtered = countriesData.filter((country) => country.name.common
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase()));
+    setFilteredCountries(filtered);
+  }, [countriesData, searchTerm]);
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
   return (
     <div className="myApp">
-      <div>
-        <h1 className="home_heading">HOME</h1>
-      </div>
       <div className="header">
         <div className="image_container">
           <img className="bg_header" src={bg} alt="Background" />
@@ -31,12 +40,21 @@ const Countries = () => {
           <p>Over 50 countries</p>
         </div>
       </div>
+      <div>
+        <input
+          className="search_bar"
+          type="text"
+          placeholder="Search by country name"
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+      </div>
       <div className="Stats_heading">
         <h4>Stats By Country</h4>
       </div>
       <ul className="countries_container">
-        {countries.map((country) => (
-          <li key={uniqueKey}>
+        {filteredCountries.map((country) => (
+          <li key={country.name.common}>
             <Link to={`/details/${country.name.common}`} className="country-link">
               <div className="img-container">
                 <img src={country.flags.png} alt={`flag of ${country.name[2]}`} className="flag-image" />

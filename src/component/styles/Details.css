@@ -70,6 +70,7 @@ p {
 
   .country_details_head p {
     text-align: left;
+    width: 100%;
   }
 
   .details div {
@@ -81,14 +82,17 @@ p {
 
   .details_header {
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr auto;
     font-size: 30px;
-    padding: 10px 4px;
+    padding: 10px 10px;
   }
 
   .details_header > .back-btn,
   .details_header > p {
     font-size: 25px;
+    text-align: left;
+    padding-left: 0;
   }
 
   .details link {
@@ -99,8 +103,7 @@ p {
     background-color: rgb(250, 203, 145);
   }
 
-  .icon {
-    background-color: rgb(11, 10, 10);
-    width: 50px;
+  .details {
+    width: 100%;
   }
 }
